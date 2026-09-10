@@ -47,8 +47,12 @@ containerization, CI/CD, monitoring and Infrastructure as Code.
   ],
 
   certifications: [
-    "Cloud Computing Training — ACTE, Bengaluru"
-  ],
+  {
+    title: "Cloud Computing Certification",
+    organization: "ACTE, Bengaluru",
+    category: "Cloud Computing / Cloud & DevOps",
+  },
+],
 
   expertise: [
     "AWS",
