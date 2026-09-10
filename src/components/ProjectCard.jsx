@@ -1,44 +1,138 @@
-const projects = [
-  {
-    title: "Chaos Engineering & Monitoring",
+function ProjectCard({ project }) {
+  return (
+    <div className="bg-white rounded-3xl shadow-xl p-10 mb-10">
 
-    overview:
-      "Built a cloud-based Chaos Engineering and Monitoring platform to simulate infrastructure resource failures and observe system behavior under different load conditions.",
+      {/* PROJECT TITLE */}
+      <h3 className="text-3xl font-bold text-gray-900 mb-5">
+        {project.title}
+      </h3>
 
-    technical: `Provisioned AWS infrastructure using Terraform with two EC2 instances.
 
-Deployed Docker-based chaos workloads using Docker Compose.
+      {/* PROJECT OVERVIEW */}
+      <div className="mb-8">
 
-Implemented event-driven load generation using AWS Lambda and Amazon SQS.
+        <h4 className="text-2xl font-bold text-gray-800 mb-3">
+          Project Overview
+        </h4>
 
-Configured Amazon CloudWatch to monitor CPU, memory, disk and inode metrics and collect system and Docker logs.
+        <p className="text-lg text-gray-700 whitespace-pre-line leading-relaxed">
+          {project.overview}
+        </p>
 
-Performed chaos testing including disk fill, CPU spike, memory usage, inode exhaustion and Lambda burst scenarios.
+      </div>
 
-Implemented Docker image versioning and rollback using version tags.
 
-Configured GitHub Actions CI/CD to build Docker images and push versioned images to Docker Hub.`,
+      {/* ================= YOUTUBE VIDEO ================= */}
 
-    techStack: [
-      "AWS EC2",
-      "Terraform",
-      "Docker",
-      "Docker Compose",
-      "AWS Lambda",
-      "Amazon SQS",
-      "CloudWatch",
-      "Flask",
-      "NGINX",
-      "GitHub Actions",
-      "Docker Hub",
-      "Linux",
-      "Bash"
-    ],
+      {project.youtube && (
+        <div className="mb-10">
 
-    github: "https://github.com/dhanushv4/chaos-lab.git",
+          <h4 className="text-2xl font-bold text-gray-800 mb-4">
+            Project Demo
+          </h4>
 
-    youtube: "https://youtu.be/HVXt9-oxVtA?si=Hmun-jupUOz0u7f2"
-  }
-]
+          <div className="w-full rounded-2xl overflow-hidden shadow-lg bg-black">
 
-export default projects
+            <div className="aspect-video">
+
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/HVXt9-oxVtA?autoplay=1&mute=1"
+                title="Chaos Engineering & Monitoring Project Demo"
+                frameBorder="0"
+                allow="autoplay; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+
+            </div>
+
+          </div>
+
+          {/* YouTube Link */}
+          <div className="mt-4">
+
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-block bg-red-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-red-700 transition"
+            >
+              Watch on YouTube
+            </a>
+
+          </div>
+
+        </div>
+      )}
+
+
+      {/* ================= TECHNICAL DETAILS ================= */}
+
+      <div className="mb-8">
+
+        <h4 className="text-2xl font-bold text-gray-800 mb-3">
+          Technical Details
+        </h4>
+
+        <p className="text-lg text-gray-700 whitespace-pre-line leading-relaxed">
+          {project.technical}
+        </p>
+
+      </div>
+
+
+      {/* ================= TECH STACK ================= */}
+
+      <div className="mb-8">
+
+        <h4 className="text-2xl font-bold text-gray-800 mb-4">
+          Technologies Used
+        </h4>
+
+        <div className="flex flex-wrap gap-3">
+
+          {project.techStack.map((tech, index) => (
+
+            <span
+              key={index}
+              className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full"
+            >
+              {tech}
+            </span>
+
+          ))}
+
+        </div>
+
+      </div>
+
+
+      {/* ================= PROJECT LINKS ================= */}
+
+      <div className="flex flex-wrap gap-4">
+
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="bg-black text-white px-6 py-3 rounded-xl hover:opacity-80 transition"
+        >
+          GitHub
+        </a>
+
+        <a
+          href={project.youtube}
+          target="_blank"
+          rel="noreferrer"
+          className="bg-red-600 text-white px-6 py-3 rounded-xl hover:bg-red-700 transition"
+        >
+          YouTube
+        </a>
+
+      </div>
+
+    </div>
+  )
+}
+
+export default ProjectCard

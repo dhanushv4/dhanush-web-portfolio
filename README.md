@@ -1,4 +1,3 @@
-````markdown
 # Dhanush V — Cloud & DevOps Portfolio
 
 🚀 Personal Portfolio & Cloud/DevOps Project Showcase
@@ -309,4 +308,4 @@ https://your-portfolio.vercel.app
 This removes all of Sanjeev's **BigData, mentoring, certifications, companies, and other unrelated information** and makes the README match your actual **Cloud/DevOps fresher profile**. Your resume also supports the Cloud/DevOps internship and skills listed here.
 
 **One thing to change later:** replace `YOUR_PORTFOLIO_GITHUB_URL` and `https://your-portfolio.vercel.app` with your actual portfolio repository and Vercel URL after deployment.
-```
+

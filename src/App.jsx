@@ -1,4 +1,3 @@
-```jsx
 import profile from "./data/profile"
 import ProjectCard from "./components/ProjectCard"
 
@@ -234,4 +233,4 @@ function App() {
 }
 
 export default App
-```
+

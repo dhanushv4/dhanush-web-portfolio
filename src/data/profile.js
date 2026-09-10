@@ -82,8 +82,10 @@ containerization, CI/CD, monitoring and Infrastructure as Code.
   linkedin:
     "https://www.linkedin.com/in/dhanush05v/",
 
+  // Resume must be inside the public folder.
+  // Put your resume at: public/resume.pdf
   resume:
-    "/c:\Users\MK VenkatesanAmutha\OneDrive\cloud computing notes\resume and interviews\Dhanush_Cloud_DevOps_SRE_Resume (1) (1) (1).docx",
+    "/resume.pdf",
 
   projects: [
     {
@@ -142,8 +144,52 @@ application upgrades and rollback.
 
       youtube:
         "https://youtu.be/HVXt9-oxVtA?si=Hmun-jupUOz0u7f2"
-  }
+    },
+    
+    {
+      title: "Chaos Engineering & Monitoring",
+
+      overview: `
+Built a cloud-based Chaos Engineering and Monitoring platform
+to simulate infrastructure resource failures and observe
+system behavior under different load and failure conditions.
+
+The project focuses on chaos testing, cloud monitoring,
+containerization, infrastructure automation and CI/CD.
+      `,
+
+      technical: `
+Infrastructure project 2
+GitHub Actions was used for CI/CD to build Docker images,
+push images to Docker Hub and manage version tags.
+
+Docker image versioning was implemented to support
+application upgrades and rollback.
+      `,
+
+      techStack: [
+        "AWS EC2",
+        "Terraform",
+        "Docker",
+        "Docker Compose",
+        "AWS Lambda",
+        "Amazon SQS",
+        "CloudWatch",
+        "Flask",
+        "NGINX",
+        "GitHub Actions",
+        "Docker Hub",
+        "Linux",
+        "Bash"
+      ],
+
+      github:
+        "https://github.com/dhanushv4/chaos-lab.git",
+
+      youtube:
+        "https://youtu.be/HVXt9-oxVtA?si=Hmun-jupUOz0u7f2"
     }
+    
   ]
 }
 
